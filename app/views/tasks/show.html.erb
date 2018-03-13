@@ -1,0 +1,16 @@
+<h2><%= @task.title %></h2>
+<br>
+ <%= link_to 'Edit', edit_task_path(@task) %>
+<br>
+<div class="card">
+  <%= @task.details %>
+</div>
+
+<%= check_box_tag( "checked", @task.completed, @task.completed, {disabled: true})%>
+<label for="checkbox">
+  <%= @task.completed ? "Task is done" : "You still need to do this" %>
+</label>
+<br>
+<br>
+<%= link_to 'Back to Tasks', tasks_path %>
+

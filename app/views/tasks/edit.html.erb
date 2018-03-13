@@ -1,0 +1,16 @@
+<%= form_for @task do |t| %>
+  <%= t.label :title %>
+  <%= t.text_field :title, class: 'form-control' %>
+
+  <%= t.label :details %>
+  <%= t.text_field :details, class: 'form-control' %>
+<br>
+  <%= t.check_box :completed, class: 'checkbox' %>
+  <label for="checkbox">
+  <%= @task.completed ? "Mark as undone" : "Mark as Done" %>
+</label>
+  <br>
+  <br>
+
+  <%= t.submit class: 'btn btn-primary' %>
+<% end %>
